@@ -39,11 +39,11 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
 # 필요한 라이브러리를 불러옵니다.
-import numpy as np
+import numpy
 import tensorflow as tf
 
 # 실행할 때마다 같은 결과를 출력하기 위해 설정하는 부분입니다.
-np.random.seed(3)
+numpy.random.seed(3)
 tf.random.set_seed(3)
 
 # 데이터를 불러 옵니다.
@@ -67,4 +67,3 @@ model.fit(X, Y, epochs=200, batch_size=10)
 
 # 결과를 출력합니다.
 print("\n Accuracy: %.4f" % (model.evaluate(X, Y)[1]))
-
