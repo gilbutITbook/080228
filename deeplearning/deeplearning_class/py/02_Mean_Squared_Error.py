@@ -15,8 +15,8 @@ def predict(x):
    return fake_a_b[0]*x + fake_a_b[1]
 
 # MSE 함수
-def mse(y_hat, y):
-   return ((y_hat - y) ** 2).mean()
+def mse(y, y_hat):
+   return ((y - y_hat) ** 2).mean()
 
 # MSE 함수를 각 y값에 대입하여 최종 값을 구하는 함수
 def mse_val(predict_result,y):

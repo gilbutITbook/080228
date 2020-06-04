@@ -23,17 +23,17 @@ a = 0
 b = 0
 
 #학습률을 정합니다.
-lr = 0.05 
+lr = 0.03 
 
-#몇 번 반복될지를 설정합니다.(0부터 세므로 원하는 반복 횟수에 +1을 해 주어야 합니다.)
+#몇 번 반복될지를 설정합니다.
 epochs = 2001 
 
 #경사 하강법을 시작합니다.
 for i in range(epochs): # epoch 수 만큼 반복
     y_hat = a * x_data + b  #y를 구하는 식을 세웁니다
     error = y_data - y_hat  #오차를 구하는 식입니다.
-    a_diff = -(1/len(x_data)) * sum(x_data * (error)) # 오차함수를 a로 미분한 값입니다. 
-    b_diff = -(1/len(x_data)) * sum(error)  # 오차함수를 b로 미분한 값입니다. 
+    a_diff = -(2/len(x_data)) * sum(x_data * (error)) # 오차함수를 a로 미분한 값입니다. 
+    b_diff = -(2/len(x_data)) * sum(error)  # 오차함수를 b로 미분한 값입니다. 
     a = a - lr * a_diff  # 학습률을 곱해 기존의 a값을 업데이트합니다.
     b = b - lr * b_diff  # 학습률을 곱해 기존의 b값을 업데이트합니다.
     if i % 100 == 0:    # 100번 반복될 때마다 현재의 a값, b값을 출력합니다.

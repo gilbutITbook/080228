@@ -57,7 +57,7 @@ model.add(Dense(64))
 model.add(Activation('relu'))
 model.add(Dropout(0.5))
 model.add(Dense(2))
-model.add(Activation('sigmoid'))
+model.add(Activation('softmax'))
 
 #모델을 컴파일 합니다. 
 model.compile(loss='sparse_categorical_crossentropy', optimizer=optimizers.Adam(learning_rate=0.0002), metrics=['accuracy'])
