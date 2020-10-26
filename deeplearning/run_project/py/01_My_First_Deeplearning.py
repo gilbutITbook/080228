@@ -1,4 +1,6 @@
-# coding: utf-8
+#!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
 # 코드 내부에 한글을 사용가능 하게 해주는 부분입니다.
 
 # 딥러닝을 구동하는 데 필요한 케라스 함수를 불러옵니다.
@@ -28,4 +30,3 @@ model.add(Dense(1, activation='sigmoid'))
 # 딥러닝을 실행합니다.
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(X, Y, epochs=100, batch_size=10)
-

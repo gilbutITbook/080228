@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import tensorflow as tf
 import numpy as np
@@ -69,6 +70,25 @@ history = model.fit_generator(
        epochs=20,
        validation_data=test_generator,
        validation_steps=10)
+
+#결과를 그래프로 표현하는 부분입니다.
+acc= history.history['accuracy']
+val_acc= history.history['val_accuracy']
+y_vloss = history.history['val_loss']
+y_loss = history.history['loss']
+
+x_len = np.arange(len(y_loss))  
+plt.plot(x_len, acc, marker='.', c="red", label='Trainset_acc')
+plt.plot(x_len, val_acc, marker='.', c="lightcoral", label='Testset_acc')
+plt.plot(x_len, y_vloss, marker='.', c="cornflowerblue", label='Testset_loss')
+plt.plot(x_len, y_loss, marker='.', c="blue", label='Trainset_loss')
+
+plt.legend(loc='upper right') 
+plt.grid()
+plt.xlabel('epoch')
+plt.ylabel('loss/acc')
+plt.show()
+
 
 #결과를 그래프로 표현하는 부분입니다.
 acc= history.history['accuracy']

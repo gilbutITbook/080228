@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.models import Sequential, Model
@@ -52,4 +53,3 @@ for i, image_idx in enumerate(random_test):    #랜덤하게 뽑은 이미지를
    plt.imshow(ae_imgs[image_idx].reshape(28, 28))  #오토인코딩 결과를 다음열에 출력합니다.
    ax.axis('off')
 plt.show()
-

@@ -1,5 +1,5 @@
-
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from keras.preprocessing import sequence
 from keras.models import Sequential
@@ -13,7 +13,9 @@ import numpy
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
-numpy.random.seed(3)
+# seed 값 설정
+seed = 0
+numpy.random.seed(seed)
 tf.random.set_seed(3)
 
 # 학습셋, 테스트셋 지정하기
@@ -63,10 +65,3 @@ plt.grid()
 plt.xlabel('epoch')
 plt.ylabel('loss')
 plt.show()
-
-
-# In[ ]:
-
-
-
-

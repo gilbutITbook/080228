@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
 
 import numpy as np
 
@@ -19,8 +20,8 @@ def mse(y, y_hat):
    return ((y - y_hat) ** 2).mean()
 
 # MSE 함수를 각 y값에 대입하여 최종 값을 구하는 함수
-def mse_val(predict_result,y):
-   return mse(np.array(predict_result), np.array(y))
+def mse_val(y, predict_result):
+   return mse(np.array(y), np.array(predict_result))
 
 # 예측값이 들어갈 빈 리스트
 predict_result = []
@@ -32,4 +33,5 @@ for i in range(len(x)):
 
 # 최종 MSE 출력
 print("MSE 최종값: " + str(mse_val(predict_result,y)))
+
 

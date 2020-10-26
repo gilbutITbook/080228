@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense

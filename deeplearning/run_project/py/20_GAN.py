@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
 from tensorflow.keras.datasets import mnist
@@ -16,7 +17,7 @@ if not os.path.exists("./gan_images"):
     os.makedirs("./gan_images")
 
 np.random.seed(3)
-tf.random.set_seed(3)   
+tf.random.set_seed(3)
 
 #생성자 모델을 만듭니다.
 generator = Sequential()
@@ -40,9 +41,7 @@ discriminator.add(Activation(LeakyReLU(0.2)))
 discriminator.add(Dropout(0.3))
 discriminator.add(Flatten())
 discriminator.add(Dense(1, activation='sigmoid'))
-
 discriminator.compile(loss='binary_crossentropy', optimizer='adam')
-
 discriminator.trainable = False
 
 #생성자와 판별자 모델을 연결시키는 gan 모델을 만듭니다.
@@ -102,3 +101,4 @@ def gan_train(epoch, batch_size, saving_interval):
               fig.savefig("gan_images/gan_mnist_%d.png" % i)
 
 gan_train(4001, 32, 200)  #4000번 반복되고(+1을 해 주는 것에 주의), 배치 사이즈는 32,  200번 마다 결과가 저장되게 하였습니다.
+

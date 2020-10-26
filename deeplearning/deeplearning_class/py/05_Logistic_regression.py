@@ -1,4 +1,8 @@
+#!/usr/bin/env python
 # coding: utf-8
+
+# In[3]:
+
 
 import numpy as np
 import pandas as pd
@@ -14,6 +18,10 @@ y_data = [i[1] for i in data]
 plt.scatter(x_data, y_data)
 plt.xlim(0, 15)
 plt.ylim(-.1, 1.1)
+
+
+# In[4]:
+
 
 # 기울기 a와 절편 b의 값을 초기화 합니다.
 a = 0
@@ -35,6 +43,9 @@ for i in range(2001):
         b = b - lr * b_diff
         if i % 1000 == 0:    # 1000번 반복될 때마다 각 x_data값에 대한 현재의 a값, b값을 출력합니다.
             print("epoch=%.f, 기울기=%.04f, 절편=%.04f" % (i, a, b))
+
+
+# In[6]:
 
 
 # 앞서 구한 기울기와 절편을 이용해 그래프를 그려 봅니다.

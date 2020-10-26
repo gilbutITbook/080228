@@ -1,9 +1,4 @@
 #!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 #-*- coding: utf-8 -*-
 
 from keras.datasets import mnist
@@ -74,10 +69,4 @@ plt.grid()
 plt.xlabel('epoch')
 plt.ylabel('loss')
 plt.show()
-
-
-# In[ ]:
-
-
-
 

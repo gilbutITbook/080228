@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from keras.datasets import mnist
 from keras.utils import np_utils
@@ -46,4 +47,3 @@ Y_train = np_utils.to_categorical(Y_class_train, 10)
 Y_test = np_utils.to_categorical(Y_class_test, 10)
 
 print(Y_train[0])
-

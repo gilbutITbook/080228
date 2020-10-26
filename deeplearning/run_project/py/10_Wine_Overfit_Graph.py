@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from keras.models import Sequential
 from keras.layers import Dense
@@ -49,7 +50,7 @@ history = model.fit(X, Y, validation_split=0.33, epochs=3500, batch_size=500)
 y_vloss=history.history['val_loss']
 
 # y_acc 에 학습 셋으로 측정한 정확도의 값을 저장
-y_acc=history.history['accuracy']
+y_acc=history.history['acc']
 
 # x값을 지정하고 정확도를 파란색으로, 오차를 빨간색으로 표시
 x_len = numpy.arange(len(y_acc))
@@ -57,4 +58,3 @@ plt.plot(x_len, y_vloss, "o", c="red", markersize=3)
 plt.plot(x_len, y_acc, "o", c="blue", markersize=3)
 
 plt.show()
-

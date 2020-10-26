@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from keras.models import Sequential, load_model
 from keras.layers.core import Dense

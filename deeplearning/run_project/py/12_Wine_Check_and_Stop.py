@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from keras.models import Sequential
 from keras.layers import Dense
@@ -44,4 +45,3 @@ checkpointer = ModelCheckpoint(filepath=modelpath, monitor='val_loss', verbose=1
 early_stopping_callback = EarlyStopping(monitor='val_loss', patience=100)
 
 model.fit(X, Y, validation_split=0.2, epochs=3500, batch_size=500, verbose=0, callbacks=[early_stopping_callback,checkpointer])
-

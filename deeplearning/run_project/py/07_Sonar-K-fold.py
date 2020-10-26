@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from keras.models import Sequential
 from keras.layers.core import Dense
@@ -46,4 +47,3 @@ for train, test in skf.split(X, Y):
 
 # 결과 출력
 print("\n %.f fold accuracy:" % n_fold, accuracy)
-

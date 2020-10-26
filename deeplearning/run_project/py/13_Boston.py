@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from keras.models import Sequential
 from keras.layers import Dense
@@ -40,4 +41,3 @@ for i in range(10):
     label = Y_test[i]
     prediction = Y_prediction[i]
     print("실제가격: {:.3f}, 예상가격: {:.3f}".format(label, prediction))
-

@@ -1,6 +1,9 @@
-# coding: utf-8
+#!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
 # 코드 내부에 한글을 사용가능 하게 해주는 부분입니다.
 
+# pandas 라이브러리를 불러옵니다.
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -47,7 +50,7 @@ numpy.random.seed(3)
 tf.random.set_seed(3)
 
 # 데이터를 불러 옵니다.
-dataset = numpy.loadtxt("../../dataset/pima-indians-diabetes.csv", delimiter=",")
+dataset = numpy.loadtxt("../dataset/pima-indians-diabetes.csv", delimiter=",")
 X = dataset[:,0:8]
 Y = dataset[:,8]
 

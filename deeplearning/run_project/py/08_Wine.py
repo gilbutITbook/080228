@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 from keras.models import Sequential
 from keras.layers import Dense
@@ -39,4 +40,5 @@ model.fit(X, Y, epochs=200, batch_size=200)
 
 # 결과 출력
 print("\n Accuracy: %.4f" % (model.evaluate(X, Y)[1]))
+
 

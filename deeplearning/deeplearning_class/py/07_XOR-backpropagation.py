@@ -1,4 +1,10 @@
+#!/usr/bin/env python
 # coding: utf-8
+
+# In[1]:
+
+
+# -*- coding: utf-8 -*-
 
 import random
 import numpy as np
@@ -168,4 +174,10 @@ if __name__ == '__main__':
 
 
 # Reference: http://arctrix.com/nas/python/bpnn.py (Neil Schemenauer)
+
+
+# In[ ]:
+
+
+
 

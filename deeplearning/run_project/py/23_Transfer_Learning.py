@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
 import tensorflow as tf
 import numpy as np
@@ -71,4 +71,3 @@ plt.grid()
 plt.xlabel('epoch')
 plt.ylabel('loss/acc')
 plt.show()
-

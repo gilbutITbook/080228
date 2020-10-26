@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
 
 import numpy as np
 import pandas as pd
@@ -38,7 +39,6 @@ for i in range(epochs): # epoch 수 만큼 반복
     b = b - lr * b_diff  # 학습률을 곱해 기존의 b값을 업데이트합니다.
     if i % 100 == 0:    # 100번 반복될 때마다 현재의 a값, b값을 출력합니다.
         print("epoch=%.f, 기울기=%.04f, 절편=%.04f" % (i, a, b))
-
 
 # 앞서 구한 기울기와 절편을 이용해 그래프를 그려 봅니다.
 y_pred = a * x_data + b

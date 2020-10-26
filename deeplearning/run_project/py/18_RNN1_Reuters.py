@@ -1,4 +1,5 @@
-# coding: utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import numpy
 import tensorflow as tf
@@ -7,11 +8,15 @@ import matplotlib.pyplot as plt
 # 로이터 뉴스 데이터셋 불러오기
 from keras.datasets import reuters
 from keras.models import Sequential
+#from tensorflow.keras.models import Sequential
+#from tensorflow.keras.layers import Dense,LSTM,Embedding
 from keras.layers import Dense, LSTM, Embedding
 from keras.preprocessing import sequence
 from keras.utils import np_utils
 
-numpy.random.seed(3)
+# seed 값 설정
+seed = 0
+numpy.random.seed(seed)
 tf.random.set_seed(3)
 
 # 불러온 데이터를 학습셋, 테스트셋으로 나누기
@@ -65,4 +70,3 @@ plt.grid()
 plt.xlabel('epoch')
 plt.ylabel('loss')
 plt.show()
-
